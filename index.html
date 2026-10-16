@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gida Homes - Elevate Your Living Experience</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0A192F',
+                            deepBlue: '#0F2C59',
+                            gold: '#D4AF37',
+                            goldHover: '#B59226',
+                            goldLight: '#F3E5AB',
+                            softWhite: '#FAFAFA',
+                            darkText: '#1E1E1E',
+                            slate: '#64748B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom scrollbar and minor tweaks */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A192F;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(10, 25, 47, 0.75) 0%, rgba(15, 44, 89, 0.85) 100%);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF099 0%, #D4AF37 50%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-card-border:hover {
+            border-color: #D4AF37;
+            box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-brand-softWhite text-brand-darkText font-sans antialiased selection:bg-brand-gold selection:text-brand-navy">
+
+    <!-- TOP HEADER BAR -->
+    <div class="bg-brand-navy text-gray-300 text-xs py-2 px-4 sm:px-8 border-b border-white/10 flex justify-between items-center">
+        <div class="flex items-center space-x-6">
+            <span class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-gold"></i> +234 (0) 800 GIDA HOMES</span>
+            <span class="hidden md:flex items-center gap-2"><i class="fa-solid fa-envelope text-brand-gold"></i> concierge@gidahomes.ng</span>
+        </div>
+        <div class="flex items-center space-x-4">
+            <span class="bg-brand-gold/20 text-brand-gold px-2 py-0.5 rounded text-[10px] font-semibold tracking-wider uppercase">Verified Properties</span>
+            <div class="flex space-x-3 text-sm">
+                <a href="#" class="hover:text-brand-gold transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-brand-gold transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-brand-gold transition-colors"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="sticky top-0 z-40 bg-brand-navy/95 backdrop-blur-md border-b border-white/10 transition-all duration-300 shadow-lg" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-brand-gold to-yellow-200 flex items-center justify-center text-brand-navy font-black text-xl shadow-md group-hover:scale-105 transition-transform">
+                        G
+                    </div>
+                    <div>
+                        <span class="text-2xl font-serif font-bold text-white tracking-wide">GIDA <span class="text-brand-gold">HOMES</span></span>
+                        <span class="block text-[9px] text-gray-400 uppercase tracking-widest -mt-1">Luxury Real Estate</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Links -->
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-medium text-gray-200">
+                    <a href="#properties" class="hover:text-brand-gold transition-colors">Properties</a>
+                    <a href="#amenities" class="hover:text-brand-gold transition-colors">Amenities</a>
+                    <a href="#calculator" class="hover:text-brand-gold transition-colors">Mortgage Calculator</a>
+                    <a href="#about" class="hover:text-brand-gold transition-colors">Why Gida</a>
+                    <a href="#testimonials" class="hover:text-brand-gold transition-colors">Testimonials</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden sm:flex items-center space-x-4">
+                    <a href="#contact" class="bg-gradient-to-r from-brand-gold to-yellow-600 hover:from-yellow-500 hover:to-brand-gold text-brand-navy font-semibold px-5 py-2.5 rounded-lg text-sm shadow-lg shadow-brand-gold/10 hover:shadow-brand-gold/20 hover:-translate-y-0.5 transition-all">
+                        Schedule Tour
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-navy border-b border-white/10 px-4 pt-2 pb-6 space-y-3">
+            <a href="#properties" class="block text-gray-300 hover:text-brand-gold py-2 border-b border-white/5">Properties</a>
+            <a href="#amenities" class="block text-gray-300 hover:text-brand-gold py-2 border-b border-white/5">Amenities</a>
+            <a href="#calculator" class="block text-gray-300 hover:text-brand-gold py-2 border-b border-white/5">Mortgage Calculator</a>
+            <a href="#about" class="block text-gray-300 hover:text-brand-gold py-2 border-b border-white/5">Why Gida</a>
+            <a href="#testimonials" class="block text-gray-300 hover:text-brand-gold py-2 border-b border-white/5">Testimonials</a>
+            <a href="#contact" class="block text-center bg-brand-gold text-brand-navy font-semibold py-2.5 rounded-lg mt-4">Schedule Tour</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-brand-navy min-h-[88vh] flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=80" alt="Luxury Architecture" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+            <span class="inline-block bg-brand-gold/15 border border-brand-gold/30 text-brand-gold text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full mb-6 uppercase tracking-widest backdrop-blur-sm">
+                <i class="fa-solid fa-crown mr-2"></i> Nigeria's Premier Living Spaces
+            </span>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-extrabold text-white leading-tight mb-6 max-w-5xl mx-auto">
+                Elevate Your Living Experience with <span class="gold-gradient-text">Gida Homes</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10 font-light leading-relaxed">
+                Where luxury meets functionality. Discover architecturally distinct homes, prime land investments, and ultra-modern smart residences in Lagos, Abuja, and Port Harcourt.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+                <a href="#properties" class="w-full sm:w-auto bg-brand-gold hover:bg-brand-goldHover text-brand-navy font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-xl shadow-brand-gold/20 hover:scale-105 text-center">
+                    Explore Properties
+                </a>
+                <a href="#contact" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-medium px-8 py-4 rounded-xl border border-white/20 backdrop-blur-md transition-all duration-300 hover:scale-105 text-center">
+                    Schedule a Tour
+                </a>
+            </div>
+
+            <!-- Hero Quick Stats Banner -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-16 pt-8 border-t border-white/10 text-white">
+                <div>
+                    <p class="text-3xl font-bold font-serif text-brand-gold">₦15B+</p>
+                    <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Property Portfolio</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold font-serif text-brand-gold">250+</p>
+                    <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Delivered Units</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold font-serif text-brand-gold">100%</p>
+                    <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Title Verified</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold font-serif text-brand-gold">15+</p>
+                    <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Prime Locations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPERTY SHOWCASE / FILTERABLE CATALOG -->
+    <section id="properties" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+                <span class="text-brand-gold font-semibold text-sm uppercase tracking-wider">Our Portfolio</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy mt-1">Featured Properties & Developments</h2>
+            </div>
+            <p class="text-brand-slate max-w-md mt-4 md:mt-0 text-sm">
+                Explore handpicked luxury homes, apartments, and commercial projects in high-yield prime locations across Nigeria.
+            </p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap gap-2 sm:gap-3 mb-10" id="filter-buttons">
+            <button onclick="filterProperties('all')" class="filter-btn active bg-brand-navy text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all shadow-md">All Properties</button>
+            <button onclick="filterProperties('luxury')" class="filter-btn bg-white text-gray-600 hover:bg-gray-100 border border-gray-200 px-5 py-2.5 rounded-full text-sm font-medium transition-all">Luxury Villas</button>
+            <button onclick="filterProperties('apartments')" class="filter-btn bg-white text-gray-600 hover:bg-gray-100 border border-gray-200 px-5 py-2.5 rounded-full text-sm font-medium transition-all">Modern Apartments</button>
+            <button onclick="filterProperties('offplan')" class="filter-btn bg-white text-gray-600 hover:bg-gray-100 border border-gray-200 px-5 py-2.5 rounded-full text-sm font-medium transition-all">Off-Plan Projects</button>
+            <button onclick="filterProperties('commercial')" class="filter-btn bg-white text-gray-600 hover:bg-gray-100 border border-gray-200 px-5 py-2.5 rounded-full text-sm font-medium transition-all">Commercial</button>
+        </div>
+
+        <!-- Property Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="property-grid">
+            <!-- Property Card 1 -->
+            <div class="property-card luxury bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md transition-all duration-300 hover:-translate-y-1.5 gold-card-border group">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80" alt="Imperial Heights" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span class="absolute top-4 left-4 bg-brand-navy/90 backdrop-blur-md text-brand-gold text-xs font-bold px-3 py-1.5 rounded-md">
+                        LUXURY VILLA
+                    </span>
+                    <span class="absolute top-4 right-4 bg-brand-gold text-brand-navy font-bold text-xs px-3 py-1.5 rounded-md shadow">
+                        READY TO MOVE
+                    </span>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-serif font-bold text-xl text-brand-navy">The Imperial Crest Mansion</h3>
+                    </div>
+                    <p class="text-gray-500 text-xs flex items-center mb-4">
+                        <i class="fa-solid fa-location-dot text-brand-gold mr-1.5"></i> Ikoyi, Lagos, Nigeria
+                    </p>
+                    <div class="grid grid-cols-3 gap-2 py-3 border-y border-gray-100 text-xs text-gray-600 mb-6">
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-bed text-brand-gold"></i> 5 Beds</span>
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-bath text-brand-gold"></i> 6 Baths</span>
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-ruler-combined text-brand-gold"></i> 750 Sqm</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-[10px] text-gray-400 block uppercase font-medium">Starting Price</span>
+                            <span class="text-xl font-extrabold text-brand-navy">₦450,000,000</span>
+                        </div>
+                        <button onclick="openModal('The Imperial Crest Mansion', 'Ikoyi, Lagos', '₦450,000,000', '5 Beds, 6 Baths, Private Pool, Smart Automation', 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80')" class="bg-brand-navy hover:bg-brand-deepBlue text-white text-xs font-bold px-4 py-2.5 rounded-lg transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Card 2 -->
+            <div class="property-card apartments bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md transition-all duration-300 hover:-translate-y-1.5 gold-card-border group">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Penthouse" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span class="absolute top-4 left-4 bg-brand-navy/90 backdrop-blur-md text-brand-gold text-xs font-bold px-3 py-1.5 rounded-md">
+                        APARTMENT
+                    </span>
+                    <span class="absolute top-4 right-4 bg-emerald-600 text-white font-bold text-xs px-3 py-1.5 rounded-md shadow">
+                        HIGH ROI
+                    </span>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-serif font-bold text-xl text-brand-navy">Aura Waterfront Penthouse</h3>
+                    </div>
+                    <p class="text-gray-500 text-xs flex items-center mb-4">
+                        <i class="fa-solid fa-location-dot text-brand-gold mr-1.5"></i> Victoria Island, Lagos
+                    </p>
+                    <div class="grid grid-cols-3 gap-2 py-3 border-y border-gray-100 text-xs text-gray-600 mb-6">
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-bed text-brand-gold"></i> 3 Beds</span>
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-bath text-brand-gold"></i> 3.5 Baths</span>
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-ruler-combined text-brand-gold"></i> 320 Sqm</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-[10px] text-gray-400 block uppercase font-medium">Starting Price</span>
+                            <span class="text-xl font-extrabold text-brand-navy">₦180,000,000</span>
+                        </div>
+                        <button onclick="openModal('Aura Waterfront Penthouse', 'Victoria Island, Lagos', '₦180,000,000', '3 Bed Penthouse, Ocean View, Concierge, Gym', 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80')" class="bg-brand-navy hover:bg-brand-deepBlue text-white text-xs font-bold px-4 py-2.5 rounded-lg transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Card 3 -->
+            <div class="property-card offplan bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md transition-all duration-300 hover:-translate-y-1.5 gold-card-border group">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Off-Plan Residences" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span class="absolute top-4 left-4 bg-brand-navy/90 backdrop-blur-md text-brand-gold text-xs font-bold px-3 py-1.5 rounded-md">
+                        OFF-PLAN
+                    </span>
+                    <span class="absolute top-4 right-4 bg-amber-500 text-white font-bold text-xs px-3 py-1.5 rounded-md shadow">
+                        SELLING FAST
+                    </span>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-serif font-bold text-xl text-brand-navy">Verdant Eco Smart Estate</h3>
+                    </div>
+                    <p class="text-gray-500 text-xs flex items-center mb-4">
+                        <i class="fa-solid fa-location-dot text-brand-gold mr-1.5"></i> Guzape, Abuja
+                    </p>
+                    <div class="grid grid-cols-3 gap-2 py-3 border-y border-gray-100 text-xs text-gray-600 mb-6">
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-bed text-brand-gold"></i> 4 Beds</span>
+    
