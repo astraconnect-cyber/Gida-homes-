@@ -68,8 +68,130 @@
           <div class="w-10 h-10 rounded-lg gold-gradient-bg flex items-center justify-center text-brand-navy font-bold text-xl shadow-lg transition-transform group-hover:scale-105">
             G
           </div>
-          <div class="flex flex-
-                <!-- ABOUT SECTION -->
+          <div class="flex flex-col">
+            <span class="text-2xl font-serif font-bold tracking-wider text-white">GIDA <span class="gold-gradient-text">HOMES</span></span>
+            <span class="text-[10px] tracking-[0.25em] text-gray-400 uppercase font-medium -mt-1">Luxury Real Estate</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="#about" class="text-gray-300 hover:text-brand-gold transition-colors">About Us</a>
+          <a href="#properties" class="text-gray-300 hover:text-brand-gold transition-colors">Featured Estates</a>
+          <a href="#features" class="text-gray-300 hover:text-brand-gold transition-colors">Why Gida</a>
+          <a href="#calculator" class="text-gray-300 hover:text-brand-gold transition-colors">Mortgage Calculator</a>
+          <a href="#testimonials" class="text-gray-300 hover:text-brand-gold transition-colors">Testimonials</a>
+        </nav>
+
+        <!-- CTA & Mobile Menu Button -->
+        <div class="flex items-center space-x-4">
+          <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full gold-gradient-bg text-brand-navy font-semibold text-sm shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-brand-gold/20 hover:shadow-lg">
+            Schedule Tour
+          </a>
+          <button id="mobileMenuBtn" class="md:hidden text-gray-300 hover:text-white focus:outline-none p-2">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-brand-dark border-b border-white/10 px-4 pt-2 pb-6 space-y-3">
+      <a href="#about" class="block text-gray-300 hover:text-brand-gold py-2">About Us</a>
+      <a href="#properties" class="block text-gray-300 hover:text-brand-gold py-2">Featured Estates</a>
+      <a href="#features" class="block text-gray-300 hover:text-brand-gold py-2">Why Gida</a>
+      <a href="#calculator" class="block text-gray-300 hover:text-brand-gold py-2">Mortgage Calculator</a>
+      <a href="#testimonials" class="block text-gray-300 hover:text-brand-gold py-2">Testimonials</a>
+      <a href="#contact" class="block w-full text-center gold-gradient-bg text-brand-navy font-semibold py-3 rounded-xl mt-4">Schedule Tour</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=80" alt="Gida Luxury Villa" class="w-full h-full object-cover">
+      <div class="absolute inset-0 hero-overlay"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white my-auto">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 text-xs sm:text-sm font-medium tracking-wide">
+        <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+        <span>Premium Residential Development & Investments</span>
+      </div>
+      
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold leading-tight max-w-5xl mx-auto mb-6">
+        Architectural Elegance. <br class="hidden sm:inline" />
+        <span class="gold-gradient-text">Unmatched Comfort.</span>
+      </h1>
+      
+      <p class="text-gray-300 text-lg sm:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+        Discover exceptional living spaces meticulously designed for luxury, security, and smart modern living in prime locations.
+      </p>
+
+      <!-- Quick Search Bar -->
+      <div class="max-w-4xl mx-auto bg-brand-dark/90 backdrop-blur-lg p-4 sm:p-6 rounded-2xl border border-white/10 shadow-2xl">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          <div>
+            <label class="block text-left text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Location</label>
+            <select id="heroLocationFilter" class="w-full bg-brand-navy border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-gold">
+              <option value="all">All Locations</option>
+              <option value="lekki">Lekki Phase 1</option>
+              <option value="ikoyi">Ikoyi</option>
+              <option value="victoria-island">Victoria Island</option>
+              <option value="abuja">Maitama, Abuja</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-left text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Property Type</label>
+            <select id="heroTypeFilter" class="w-full bg-brand-navy border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-gold">
+              <option value="all">All Property Types</option>
+              <option value="duplex">Fully Detached Duplex</option>
+              <option value="penthouse">Luxury Penthouse</option>
+              <option value="terrace">Smart Terrace</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-left text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Price Range</label>
+            <select id="heroPriceFilter" class="w-full bg-brand-navy border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-gold">
+              <option value="all">Any Price</option>
+              <option value="150m">₦150M - ₦250M</option>
+              <option value="350m">₦250M - ₦500M</option>
+              <option value="500m+">₦500M+</option>
+            </select>
+          </div>
+          <div class="flex items-end">
+            <button onclick="applyHeroFilter()" class="w-full gold-gradient-bg text-brand-navy font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>Explore Homes</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto border-t border-white/10 pt-8">
+        <div>
+          <div class="text-3xl font-serif font-bold gold-gradient-text">₦45B+</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider mt-1">Property Portfolio</div>
+        </div>
+        <div>
+          <div class="text-3xl font-serif font-bold gold-gradient-text">150+</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider mt-1">Luxury Units Delivered</div>
+        </div>
+        <div>
+          <div class="text-3xl font-serif font-bold gold-gradient-text">99.8%</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider mt-1">Client Satisfaction</div>
+        </div>
+        <div>
+          <div class="text-3xl font-serif font-bold gold-gradient-text">100%</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider mt-1">C of O Verified</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
   <section id="about" class="py-24 bg-white relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -204,12 +326,72 @@
         <!-- Property 3 -->
         <div class="property-card bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 border border-slate-100 flex flex-col" data-category="abuja" data-price="380000000">
           <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Maitama Haven" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+             800&q=80" alt="Maitama Haven" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
             <div class="absolute top-4 left-4 bg-brand-navy/80 backdrop-blur-md text-brand-gold text-xs px-3 py-1.5 rounded-full font-semibold">Under Construction</div>
             <div class="absolute bottom-4 left-4 text-white font-serif font-bold text-2xl drop-shadow-md">₦380,000,000</div>
           </div>
-          <div class="p-6
-      <!-- MORTGAGE / PAYMENT CALCULATOR -->
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-xs text-brand-gold font-bold uppercase tracking-wider mb-1"><i class="fa-solid fa-location-dot mr-1"></i> Maitama, Abuja</div>
+              <h3 class="text-xl font-bold text-brand-navy mb-2">The Diplomat Heights</h3>
+              <p class="text-slate-500 text-xs leading-relaxed mb-4">5-Bedroom contemporary mansion with private basement garage, rooftop lounge, and smart security systems.</p>
+              
+              <div class="grid grid-cols-3 gap-2 py-3 border-y border-slate-100 text-xs text-slate-600 mb-6">
+                <div class="flex items-center gap-1.5"><i class="fa-solid fa-bed text-brand-gold"></i> 5 Beds</div>
+                <div class="flex items-center gap-1.5"><i class="fa-solid fa-bath text-brand-gold"></i> 6 Baths</div>
+                <div class="flex items-center gap-1.5"><i class="fa-solid fa-ruler-combined text-brand-gold"></i> 700 sqm</div>
+              </div>
+            </div>
+
+            <div class="flex gap-3">
+              <button onclick="openModal('diplomat')" class="flex-1 border border-brand-navy text-brand-navy font-semibold py-2.5 rounded-xl hover:bg-brand-navy hover:text-white transition-colors text-sm">View Details</button>
+              <a href="#contact" class="gold-gradient-bg text-brand-navy font-bold px-4 py-2.5 rounded-xl hover:shadow-md transition-all text-sm flex items-center justify-center"><i class="fa-solid fa-calendar-check"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES / WHY CHOOSE US -->
+  <section id="features" class="py-24 bg-brand-navy text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-gold font-semibold uppercase tracking-widest text-xs">Excellence Delivered</span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold mt-2">Why Invest In Gida Homes?</h2>
+        <p class="text-gray-400 mt-4 font-light">We offer an unmatched standard of living combined with strong capital appreciation.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-brand-dark/60 border border-white/10 p-8 rounded-2xl hover:border-brand-gold/50 transition-all">
+          <div class="w-14 h-14 rounded-2xl gold-gradient-bg flex items-center justify-center text-brand-navy text-2xl font-bold mb-6">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 font-serif">24/7 Uninterrupted Power</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Integrated hybrid solar grids and backup power solutions guarantee round-the-clock electrification with reduced carbon footprint.</p>
+        </div>
+
+        <div class="bg-brand-dark/60 border border-white/10 p-8 rounded-2xl hover:border-brand-gold/50 transition-all">
+          <div class="w-14 h-14 rounded-2xl gold-gradient-bg flex items-center justify-center text-brand-navy text-2xl font-bold mb-6">
+            <i class="fa-solid fa-shield-cat"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 font-serif">Biometric & Smart Security</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Multi-tier perimeter security, AI facial recognition cameras, biometric access doors, and 24-hour physical security surveillance.</p>
+        </div>
+
+        <div class="bg-brand-dark/60 border border-white/10 p-8 rounded-2xl hover:border-brand-gold/50 transition-all">
+          <div class="w-14 h-14 rounded-2xl gold-gradient-bg flex items-center justify-center text-brand-navy text-2xl font-bold mb-6">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 font-serif">High Rental Yields</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Strategically situated in high-demand economic hubs yielding up to 18% annual rental return and rapid capital gain.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MORTGAGE / PAYMENT CALCULATOR -->
   <section id="calculator" class="py-24 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-brand-lightBg border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-xl">
@@ -275,6 +457,22 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100 flex flex-col justify-between">
+          <div>
+            <div class="text-brand-gold text-sm flex gap-1 mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-600 text-sm italic leading-relaxed mb-6">"Buying our home at Gida Horizon Villa in Lekki was seamless. The finishing quality is world-class, and the solar power grid works impeccably."</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-navy text-white font-bold flex items-center justify-center">OA</div>
+            <div>
+              <h4 class="font-bold text-sm text-brand-navy">Dr. Olumide Adeleke</h4>
+              <p class="text-xs text-slate-400">Horizon Villa Owner</p>
+            </div>
+          </div>
+        </div>
+
         <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100 flex flex-col justify-between">
           <div>
             <div class="text-brand-gold text-sm flex gap-1 mb-4">
@@ -510,7 +708,7 @@
       const downPaymentAmount = price * (downPercent / 100);
       const loanAmount = price - downPaymentAmount;
       const annualInterestRate = 0.15; // 15%
-      const monthlyRate = annualInterestRate / 12;
+            const monthlyRate = annualInterestRate / 12;
       const numberOfPayments = tenureYears * 12;
 
       // Mortgage Formula: M = P[i(1+i)^n]/[(1+i)^n - 1]
@@ -583,5 +781,8 @@
     }
   </script>
 </body>
-    </html>
-                                                                                                         
+</html>
+
+    
+  
+  
